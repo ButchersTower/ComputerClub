@@ -15,7 +15,7 @@ public class RPS {
 	void simpelGame() {
 		int playChoice;
 		System.out.println("Make a choice");
-		System.out.println("1: rock\n2: paper\n3: Sissors");
+		System.out.println("1: rock\n2: paper\n3: scissors");
 		Scanner scan = new Scanner(System.in);
 		playChoice = scan.nextInt();
 		if (playChoice == 1) {
@@ -23,7 +23,7 @@ public class RPS {
 		} else if (playChoice == 2) {
 			System.out.println("you picked paper");
 		} else if (playChoice == 3) {
-			System.out.println("you picked sissors");
+			System.out.println("you picked scissors");
 		}
 		Random rand = new Random();
 		int compChoice = rand.nextInt(3);
@@ -32,7 +32,7 @@ public class RPS {
 		} else if (compChoice == 1) {
 			System.out.println("computer picked paper");
 		} else if (compChoice == 2) {
-			System.out.println("computer picked sissors");
+			System.out.println("computer picked scissors");
 		}
 
 		if (playChoice == 1) {
@@ -65,7 +65,7 @@ public class RPS {
 	void caseGame() {
 		int playChoice;
 		System.out.println("Make a choice");
-		System.out.println("1: rock\n2: paper\n3: Sissors");
+		System.out.println("1: rock\n2: paper\n3: scissors");
 		Scanner scan = new Scanner(System.in);
 		playChoice = scan.nextInt();
 		switch (playChoice) {
@@ -76,7 +76,7 @@ public class RPS {
 			System.out.println("paper");
 			break;
 		case 3:
-			System.out.println("sissors");
+			System.out.println("scissors");
 			break;
 		}
 		System.out.println("after");
