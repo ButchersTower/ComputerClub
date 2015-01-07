@@ -58,12 +58,7 @@ public class Panel extends JPanel implements MouseListener, KeyListener {
 		draw();
 	}
 
-	void simpleGame() {
-		int playChoice;
-		System.out.println("Make a choice");
-		System.out.println("1: rock\n2: paper\n3: scissors");
-		Scanner scan = new Scanner(System.in);
-		playChoice = scan.nextInt();
+	void simpleGame(int playChoice) {
 		if (playChoice == 1) {
 			System.out.println("you picked rock");
 		} else if (playChoice == 2) {
@@ -169,19 +164,22 @@ public class Panel extends JPanel implements MouseListener, KeyListener {
 
 	@Override
 	public void mouseClicked(MouseEvent me) {
+		System.out.println("*click*");
 		draw();
 		drwGm();
 		if (me.getX() > imageMargin && me.getX() < imageMargin + image1Width) {
 			if (me.getY() > imageMargin
 					&& me.getY() < image1Height + imageMargin) {
-				System.out.println("rock");
+				// System.out.println("rock");
+				simpleGame(1);
 			}
 		}
 		if (me.getX() > imageMargin * 2 + image1Width
 				&& me.getX() < imageMargin * 2 + image1Width + image2Width) {
 			if (me.getY() > imageMargin
 					&& me.getY() < image2Height + imageMargin) {
-				System.out.println("Paper");
+				// System.out.println("Paper");
+				simpleGame(2);
 			}
 		}
 		if (me.getX() > imageMargin * 3 + image1Width + image2Width
@@ -189,7 +187,8 @@ public class Panel extends JPanel implements MouseListener, KeyListener {
 						+ image3Width) {
 			if (me.getY() > imageMargin
 					&& me.getY() < image3Height + imageMargin) {
-				System.out.println("Scissors");
+				// System.out.println("Scissors");
+				simpleGame(3);
 			}
 		}
 	}
